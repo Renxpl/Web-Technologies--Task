@@ -12053,5 +12053,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+footer {
+  text-align: center; /* Metni yatay olarak ortala */
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
