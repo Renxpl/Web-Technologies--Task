@@ -12052,9 +12052,7 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-footer {
-  text-align: center; /* Metni yatay olarak ortala */
+  
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
