@@ -4,3 +4,19 @@ footer {
   .ps-xxl-25 {
     padding-left: 15rem !important;
   }
+
+  .p-xl-25 {
+    padding: 15rem !important;
+  }
+  .p-xl-10 {
+    padding: 5rem !important;
+  }
+  .px-xl-10 {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+  .giris-boslugu {
+    display: block;
+    text-indent: 2em;
+  }
+  
