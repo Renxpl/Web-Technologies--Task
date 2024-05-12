@@ -1,5 +1,5 @@
 footer {
-    text-align: center; /* Metni yatay olarak ortala */
+    text-align: center; 
   }
   .ps-xxl-25 {
     padding-left: 15rem !important;
@@ -19,4 +19,48 @@ footer {
     display: block;
     text-indent: 2em;
   }
-  
+  .form-control-yeni {
+    display: block;
+    width: 15%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .form-control-yeni-password {
+    display: block;
+    width: 12%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .pt-1-2 {
+    padding-top: 0.38rem !important;
+  }
+
+  .pe-6 {
+    padding-right: 4rem !important;
+  }
+  .pe-7 {
+    padding-right: 6rem !important;
+  }
