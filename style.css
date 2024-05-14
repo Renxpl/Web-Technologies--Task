@@ -64,3 +64,32 @@ footer {
   .pe-7 {
     padding-right: 6rem !important;
   }
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+ 
