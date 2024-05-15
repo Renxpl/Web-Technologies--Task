@@ -81,46 +81,17 @@
     </div>
 
     
-    <script>
+<script>
 
-const apiKey = '13a2f385bd134c4ed079b452ebd46bb3e81da7fa'; // GiantBomb API anahtarınızı buraya ekleyin
-const apiUrl = `https://www.giantbomb.com/api/games/3030-84787/?api_key=13a2f385bd134c4ed079b452ebd46bb3e81da7fa`;
+const apiKey = '13a2f385bd134c4ed079b452ebd46bb3e81da7fa'; 
+const apiUrl = `http://www.giantbomb.com/api/game/3030-84787/?api_key=13a2f385bd134c4ed079b452ebd46bb3e81da7fa`;
+const apiUrll= 'https://pokeapi.co/api/v2/pokemon/pikachu'
+fetch(apiUrl)
+  .then(response => console.log(response.deck))
+  .catch(error=>console.log(error));
 
-async function fetchGames() {
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    displayGames(data.results);
-  } catch (error) {
-    console.error('Veri alınırken bir hata oluştu:', error);
-  }
-}
 
-function displayGames(games) {
-  const gamesContainer = document.getElementById('games');
-  gamesContainer.innerHTML = '';
-
-  games.forEach(game => {
-    const gameCard = document.createElement('div');
-    gameCard.classList.add('col-md-4', 'game-card');
-
-    gameCard.innerHTML = `
-      <div class="card">
-        <img src="${game.image}" class="card-img-top" alt="${game.name}">
-        <div class="card-body">
-          <h5 class="card-title">${game.name}</h5>
-          <p class="card-text">${game.deck}</p>
-          <p class="card-text"><small class="text-muted">Çıkış Tarihi: ${game.original_release_date}</small></p>
-        </div>
-      </div>
-    `;
-
-    gamesContainer.appendChild(gameCard);
-  });
-}
-
-fetchGames();
-    </script>
+</script>
     
 
 
@@ -147,13 +118,13 @@ fetchGames();
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="test.jpg" class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="test2.png" class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="test3.png" class="d-block w-100" alt="...">
+                <img src="" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -192,7 +163,7 @@ fetchGames();
   <div class="row justify-content-center">
     <div class="col-sm-6">
       <div class="card" style="width: 18rem;">
-        <img src="test.jpg" class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title 1</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -202,7 +173,7 @@ fetchGames();
     </div>
     <div class="col-sm-6">
       <div class="card" style="width: 18rem;">
-        <img src="test2.png" class="card-img-top" alt="...">
+        <img src="" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title 2</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -217,7 +188,7 @@ fetchGames();
 <div class="row">
   <div class="col-sm-6 mb-3 mb-sm-0 ">
     <div class="card" style="width: 18rem;">
-      <img src="test.jpg" class="card-img-top" alt="...">
+      <img src="" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -227,7 +198,7 @@ fetchGames();
   </div>
   <div class="col-sm-6">
     <div class="card" style="width: 18rem;">
-      <img src="test.jpg" class="card-img-top" alt="...">
+      <img src="" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
