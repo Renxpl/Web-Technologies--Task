@@ -75,53 +75,53 @@
   
 
 
+    <div class="container mt-5">
+      <h1>Popüler Oyunlar</h1>
+      <div id="games" class="row"></div>
+    </div>
 
-
-    
     
     <script>
-        function myFunction() {
-            var x = document.getElementById("myNavbar");
-            if (x.className === "navbar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navbar";
-            }
-        }
-    </script>
 
-      <div class="card-group">
-        <div class="card">
-          <img src="school photos/sakarya pc.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img src="school photos/sakarya tıp fak.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </div>
+const apiKey = '13a2f385bd134c4ed079b452ebd46bb3e81da7fa'; // GiantBomb API anahtarınızı buraya ekleyin
+const apiUrl = `https://www.giantbomb.com/api/games/3030-84787/?api_key=13a2f385bd134c4ed079b452ebd46bb3e81da7fa`;
+
+async function fetchGames() {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    displayGames(data.results);
+  } catch (error) {
+    console.error('Veri alınırken bir hata oluştu:', error);
+  }
+}
+
+function displayGames(games) {
+  const gamesContainer = document.getElementById('games');
+  gamesContainer.innerHTML = '';
+
+  games.forEach(game => {
+    const gameCard = document.createElement('div');
+    gameCard.classList.add('col-md-4', 'game-card');
+
+    gameCard.innerHTML = `
+      <div class="card">
+        <img src="${game.image}" class="card-img-top" alt="${game.name}">
+        <div class="card-body">
+          <h5 class="card-title">${game.name}</h5>
+          <p class="card-text">${game.deck}</p>
+          <p class="card-text"><small class="text-muted">Çıkış Tarihi: ${game.original_release_date}</small></p>
         </div>
       </div>
+    `;
+
+    gamesContainer.appendChild(gameCard);
+  });
+}
+
+fetchGames();
+    </script>
+    
 
 
 
