@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teşekkürler</title>
+</head>
+<body>
+  <h1>Gönderdiğiniz Bilgiler</h1>
+  <div id="app">
+    <p><strong>Ad:</strong> {{ form.name }}</p>
+    <p><strong>E-posta:</strong> {{ form.email }}</p>
+    <p><strong>Telefon:</strong> {{ form.phone }}</p>
+    <p><strong>Mesaj:</strong> {{ form.message }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        form: JSON.parse(localStorage.getItem('contactForm')) || {}
+      }
+    });
+  </script>
+</body>
+</html>
+
