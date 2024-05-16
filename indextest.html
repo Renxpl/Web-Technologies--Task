@@ -84,6 +84,7 @@ const apiUrl = `https://rawg.io/api/games?token&key=${apiKey}`;
 const apiUrll= 'https://pokeapi.co/api/v2/pokemon/pikachu'
 fetch(apiUrl)
   .then(response => console.log(response.deck))
+  .then(data=>console.log(data))
   .catch(error=>console.log(error));
 
 
