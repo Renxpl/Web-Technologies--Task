@@ -79,10 +79,10 @@
     
 <script>
 
-const apiKey = '13a2f385bd134c4ed079b452ebd46bb3e81da7fa'; 
-const apiUrl = `http://www.giantbomb.com/api/game/3030-84787/?api_key=13a2f385bd134c4ed079b452ebd46bb3e81da7fa`;
+const apiKey = '751ae4da80aa470ab63d3a0f043a5ca9'; 
+const apiUrl = `https://rawg.io/api/games?token&key=${apiKey}`;
 const apiUrll= 'https://pokeapi.co/api/v2/pokemon/pikachu'
-fetch(apiUrll)
+fetch(apiUrl)
   .then(response => console.log(response.deck))
   .catch(error=>console.log(error));
 
