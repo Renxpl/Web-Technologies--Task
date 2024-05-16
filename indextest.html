@@ -75,18 +75,14 @@
   
 
 
-    <div class="container mt-5">
-      <h1>Popüler Oyunlar</h1>
-      <div id="games" class="row"></div>
-    </div>
-
+ 
     
 <script>
 
 const apiKey = '13a2f385bd134c4ed079b452ebd46bb3e81da7fa'; 
 const apiUrl = `http://www.giantbomb.com/api/game/3030-84787/?api_key=13a2f385bd134c4ed079b452ebd46bb3e81da7fa`;
 const apiUrll= 'https://pokeapi.co/api/v2/pokemon/pikachu'
-fetch(apiUrl)
+fetch(apiUrll)
   .then(response => console.log(response.deck))
   .catch(error=>console.log(error));
 
@@ -110,33 +106,8 @@ fetch(apiUrl)
           </header>
           -->
           
-          <div id="carouselExample" class="carousel slide w-25">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-             
-            </button>
-          </div>
-
+          
+          
 
 
 <br><br><br><br><br><br><br><br><br><br>
@@ -229,7 +200,7 @@ fetch(apiUrl)
 
       </main>
 
-
+     
 
       <footer>
         <div class="mx-auto">

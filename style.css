@@ -92,4 +92,13 @@ footer {
         text-align: left;
     }
 }
+
+
+.carousel-item{
+  max-height: 400px;
+}
+
+.mySlide{
+  max-height: 400px;
+}
  
