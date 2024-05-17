@@ -3,10 +3,9 @@ session_start();
 
 // Basit bir kullanıcı veritabanı örneği (gerçek uygulamalarda bu veriler veritabanında saklanır)
 $users = [
-    'b1812100001@example.com' => 'password123',
+    'b1812100001@sakarya.edu.tr' => 'b1812100001',
     // Diğer kullanıcılar...
 ];
-
 // Formdan gelen verileri al
 $email = $_POST['epost'];
 $password = $_POST['passw'];
