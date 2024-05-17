@@ -43,35 +43,36 @@
         function goToPage() {
         window.location.href = "login.html"; // Gitmek istediğiniz sayfanın URL'si
         }
-    </script>
+        </script>
 
 
   <div id="app" class="container-fluid">
     <h1 class="d-flex justify-content-center">İletişim Formu</h1><br>
     <form @submit.prevent="submitForm">
       <div class="d-flex justify-content-center">
-        <label for="name">Ad:</label>
-        <input type="text" id="name" v-model="form.name" @input="validateName">
+        <label class="pt-1-2" for="name">Ad:</label>
+        <input type="text" id="name" v-model="form.name" @input="validateName" class="form-control-yeni ms-3">
         <span v-if="errors.name">{{ errors.name }}</span>
       </div> <br>
       <div class="d-flex justify-content-center">
-        <label for="email">E-posta:</label>
-        <input type="email" id="email" v-model="form.email" @input="validateEmail">
+        <label class="pt-1-2" for="email">E-posta:</label>
+        <input type="email" id="email" v-model="form.email" @input="validateEmail" class="form-control-yeni ms-3">
         <span v-if="errors.email">{{ errors.email }}</span>
       </div><br>
       <div class="d-flex justify-content-center">
-        <label for="phone">Telefon:</label>
-        <input type="tel" id="phone" v-model="form.phone" @input="validatePhone">
+        <label class="pt-1-2" for="phone">Telefon:</label>
+        <input type="tel" id="phone" v-model="form.phone" @input="validatePhone" class="form-control-yeni ms-3">
         <span v-if="errors.phone">{{ errors.phone }}</span>
       </div><br>
       <div class="d-flex justify-content-center">
-        <label for="message">Mesaj:</label>
-        <textarea id="message" v-model="form.message" @input="validateMessage"></textarea>
+        <label class="pt-1-2" for="message">Mesaj:</label>
+        <textarea id="message" v-model="form.message" @input="validateMessage" class="form-control-yeni ms-3"></textarea>
         <span v-if="errors.message">{{ errors.message }}</span>
       </div><br>
       <div class="d-flex justify-content-center">
-      <button type="button"  class="btn btn-secondary" @click="clearForm">Temizle</button>
-      <button type="submit"  class="btn btn-primary">Gönder</button>
+        <button type="submit"  class="btn btn-outline-success">Gönder</button>
+      <button type="button"  class="btn btn-danger ms-3" @click="clearForm">Temizle</button>
+      
     </div>
     </form>
   </div>

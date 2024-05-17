@@ -52,6 +52,36 @@
   </div>
 </div>
 
+
+
+
+<div  class="container-fluid">
+    <div class=" d-flex justify-content-center">
+        <p class="px-xl-10 pt-3"> 
+            <span class="giris-boslugu pt-1">Diğer kısımlarda da bahsettiğim gibi en çok ilgilendiğim hobim video oyunları, o yüzden aşağıya video oyunlarını aratabileceğiniz ve
+                arattığınız oyunun kapak sayfası, puanı, çıkış tarihine ulaşabileceğiniz bir yapı tasarladım.
+                Şu anda oynadığım bazı oyunlardan örnekleri aşağıda sıraladım, dilerseniz onları aratabilirsiniz.
+            </span>
+        </p>
+     
+   </div>
+
+   <div  class="container-fluid">
+    <div class=" d-flex justify-content-center">
+        <ul>
+            <li>The Legend of Zelda: Breath of the Wild</li>
+            <li>Final Fantasy VII Rebirth</li>
+            <li>Marvel's Spider-Man 2</li>
+            <li>Armored Core VI: Fires of Rubicon</li>
+            <li>Granblue Fantasy: Relink</li>
+        </ul>
+     
+   </div>
+
+
+
+
+
 <script>
 
     const apiKey = '751ae4da80aa470ab63d3a0f043a5ca9'; 
@@ -89,7 +119,7 @@
     function oyunuGoster(data) {
     const gameDataDiv = document.getElementById('gameData');
     if (data.results && data.results.length > 0) {
-    const game = data.results[0]; // İlk sonucu alıyoruz
+    const game = data.results[0]; // İlk sonuç
     gameDataDiv.innerHTML = `<br><br><br>
       <h3>${game.name}</h3><br>
       <img src="${game.background_image}" alt="${game.name}" style="width: 100%; max-width: 400px;"><br>

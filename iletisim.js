@@ -51,7 +51,7 @@ new Vue({
         if (!this.errors.name && !this.errors.email && !this.errors.phone && !this.errors.message) {
           // Tüm veriler doğrulandıktan sonra başka bir sayfada görüntülenebilir
           localStorage.setItem('contactForm', JSON.stringify(this.form));
-          window.location.href = 'thankyou.html';
+          window.location.href = 'sonuc.html';
         }
       }
     }
