@@ -7,13 +7,13 @@ $users = [
     // Diğer kullanıcılar...
 ];
 // Formdan gelen verileri al
-$email = $_POST['epost'];
-$password = $_POST['passw'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 // E-posta ve şifrenin boş olup olmadığını kontrol et
 if (empty($email) || empty($password)) {
     echo "Kullanıcı adı ve şifre boş geçilemez. Lütfen tekrar deneyin.";
-    header("Refresh: 3; url=index.html"); // 3 saniye sonra login sayfasına geri yönlendir
+    header("Refresh: 3; url=login.html"); // 3 saniye sonra login sayfasına geri yönlendir
     exit;
 }
 
@@ -22,10 +22,10 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) && isset($users[$email]) && $users
     $_SESSION['user'] = $email;
     echo "Hoşgeldiniz “$email”. Giriş başarılı!";
     // Giriş başarılı, başka bir sayfaya yönlendirilebilir
-    // header("Location: welcome.php");
+    header("Refresh: 5; url=index.html");
 } else {
     echo "Kullanıcı adı veya şifre hatalı. Lütfen tekrar deneyin.";
-    header("Refresh: 3; url=index.html"); // 3 saniye sonra login sayfasına geri yönlendir
+    header("Refresh: 3; url=login.html"); // 3 saniye sonra login sayfasına geri yönlendir
     exit;
 }
 ?>
